@@ -9,6 +9,9 @@ __pycache__/
 # sys file
 .DS_Store
 
+# editor configuration
+.idea
+
 # Distribution / packaging
 .Python
 build/
