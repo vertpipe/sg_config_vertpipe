@@ -12,7 +12,7 @@
 ################################################################################
 # A single, top-level setting is defined: "@frameworks". This setting can
 # be included and referenced wherever shared frameworks are required.
-
+include: unreal/frameworks.yml
 frameworks:
   # adobe - Common functionality for adobe products
   tk-framework-adobe_v1.x.x:
