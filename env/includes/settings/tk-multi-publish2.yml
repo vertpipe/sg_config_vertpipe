@@ -190,6 +190,7 @@ settings.tk-multi-publish2.maya.asset_step:
     hook: "{self}/publish_file.py:{engine}/tk-multi-publish2/basic/publish_session_geometry.py"
     settings:
         Publish Template: asset_alembic_cache
+  post_phase: "{config}/tk-multi-publish2/post_phase.py"
   help_url: *help_url
   location: "@apps.tk-multi-publish2.location"
 
