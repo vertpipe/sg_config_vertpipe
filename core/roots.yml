@@ -5,8 +5,8 @@
 primary:
   default: true
   linux_path: null
-  mac_path: /Users/johnnyzxt/SG_ProjectVertpipe
+  mac_path: /Users/johnnyzxt/SG_ldtc_Proj
   shotgun_storage_id: 3
-  windows_path: Y:\temp\johnnyzxt\SG_ProjectVertpipe
+  windows_path: Y:\temp\johnnyzxt\SG_ldtc_Proj
 
 # End of file.
