@@ -70,3 +70,10 @@ frameworks:
       version: v0.2.2
       type: app_store
       name: tk-framework-lmv
+  tk-framework-remotestorage_v1.x.x:
+    provider_hook: "{config}/tk-framework-remotestorage/example_local_provider.py"
+    location:
+      type: github_release
+      organization: shotgunsoftware
+      repository: tk-framework-remotestorageexample
+      version: v1.0.0
