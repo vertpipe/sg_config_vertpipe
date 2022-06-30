@@ -40,9 +40,9 @@ frameworks:
       version: v2.10.3
       type: app_store
       name: tk-framework-qtwidgets
-  tk-framework-shotgunutils_v4.x.x:
+  tk-framework-shotgunutils_v5.x.x:
     location:
-      version: v4.4.15
+      version: v5.8.5
       type: app_store
       name: tk-framework-shotgunutils
   tk-framework-shotgunutils_v5.x.x:
