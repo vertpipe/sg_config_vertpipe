@@ -17,6 +17,7 @@ includes:
 
 # generic
 settings.tk-multi-shotgunpanel:
+  shotgun_fields_hook: '{config}/tk-multi-shotgunpanel/my_sg_fields.py'
   action_mappings:
     PublishedFile:
     - actions: [publish_clipboard]
@@ -87,6 +88,7 @@ settings.tk-multi-shotgunpanel.houdini:
 
 # maya
 settings.tk-multi-shotgunpanel.maya:
+  shotgun_fields_hook: '{config}/tk-multi-shotgunpanel/my_sg_fields.py'
   action_mappings:
     PublishedFile:
     - actions: [reference, import]
@@ -115,6 +117,7 @@ settings.tk-multi-shotgunpanel.maya:
 
 # nuke
 settings.tk-multi-shotgunpanel.nuke:
+  shotgun_fields_hook: '{config}/tk-multi-shotgunpanel/my_sg_fields.py'
   action_mappings:
     PublishedFile:
     - actions: [read_node]
@@ -210,6 +213,7 @@ settings.tk-multi-shotgunpanel.hiero:
 # photoshop
 settings.tk-multi-shotgunpanel.photoshop:
   actions_hook: "{self}/general_actions.py"
+  shotgun_fields_hook: '{config}/tk-multi-shotgunpanel/my_sg_fields.py'
   action_mappings:
     PublishedFile:
     - actions: [add_as_a_layer, open_file]
@@ -232,6 +236,7 @@ settings.tk-multi-shotgunpanel.photoshop:
 
 # after effects
 settings.tk-multi-shotgunpanel.aftereffects:
+  shotgun_fields_hook: '{config}/tk-multi-shotgunpanel/my_sg_fields.py'
   action_mappings:
     PublishedFile:
     - actions: [add_to_project, add_to_comp]

@@ -17,9 +17,9 @@ frameworks:
   # adobe - Common functionality for adobe products
   tk-framework-adobe_v1.x.x:
     location:
-      version: v1.1.5
       type: app_store
       name: tk-framework-adobe
+      version: v1.1.6
   tk-framework-adminui_v0.x.x:
     location:
       version: v0.7.2
@@ -32,19 +32,14 @@ frameworks:
       name: tk-framework-aliastranslations
   tk-framework-desktopserver_v1.x.x:
     location:
-      version: v1.5.2
       type: app_store
       name: tk-framework-desktopserver
+      version: v1.5.3
   tk-framework-qtwidgets_v2.x.x:
     location:
       version: v2.10.3
       type: app_store
       name: tk-framework-qtwidgets
-  tk-framework-shotgunutils_v5.x.x:
-    location:
-      version: v5.8.5
-      type: app_store
-      name: tk-framework-shotgunutils
   tk-framework-shotgunutils_v5.x.x:
     location:
       version: v5.8.5
@@ -71,7 +66,7 @@ frameworks:
       type: app_store
       name: tk-framework-lmv
   tk-framework-remotestorage_v1.x.x:
-    provider_hook: "{config}/tk-framework-remotestorage/example_local_provider.py"
+    provider_hook: '{config}/tk-framework-remotestorage/example_local_provider.py'
     location:
       type: github_release
       organization: shotgunsoftware
