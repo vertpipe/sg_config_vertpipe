@@ -17,6 +17,7 @@ includes:
 - ./tk-multi-launchapp.yml
 - ./tk-multi-publish2.yml
 - ./tk-multi-screeningroom.yml
+- ./sb-shotgun-schema-introspection.yml
 
 ################################################################################
 
@@ -41,6 +42,7 @@ settings.tk-desktop.project:
     tk-multi-launchmotionbuilder: "@settings.tk-multi-launchapp.motionbuilder"
     tk-multi-publish2: "@settings.tk-multi-publish2.standalone"
     tk-multi-screeningroom: "@settings.tk-multi-screeningroom.rv"
+    sb-shotgun-schema-introspection: "@settings.sb-shotgun-schema-introspection"
 
   groups:
   - matches:

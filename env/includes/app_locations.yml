@@ -132,4 +132,11 @@ apps.tk-mari-projectmanager.location:
   name: tk-mari-projectmanager
   type: app_store
   version: v1.3.1
+apps.sb-shotgun-schema-introspection.location:
+  name: sb-shotgun-schema-introspection
+  type: git_branch
+  branch: master
+  path: https://github.com/scottb08/sb-shotgun-schema-introspection.git
+  version: f0488f0
+
 frameworks: '@frameworks'
