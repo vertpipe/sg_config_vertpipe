@@ -63,6 +63,8 @@ settings.tk-maya.asset_step:
 # project
 settings.tk-maya.project:
   apps:
+    tk-multi-bugreporter:
+      location: "@apps.tk-multi-bugreporter.location"
     tk-multi-about:
       location: "@apps.tk-multi-about.location"
     tk-multi-pythonconsole:
