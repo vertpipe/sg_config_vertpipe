@@ -31,7 +31,7 @@ apps.tk-multi-breakdown.location:
 apps.tk-multi-breakdown2.location:
   type: app_store
   name: tk-multi-breakdown2
-  version: v0.2.3
+  version: v0.2.4
 apps.tk-multi-demo.location:
   type: app_store
   name: tk-multi-demo
@@ -43,11 +43,11 @@ apps.tk-multi-launchapp.location:
 apps.tk-multi-loader2.location:
   type: app_store
   name: tk-multi-loader2
-  version: v1.21.2
+  version: v1.22.0
 apps.tk-multi-publish2.location:
   type: app_store
   name: tk-multi-publish2
-  version: v2.6.2
+  version: v2.6.3
 apps.tk-multi-pythonconsole.location:
   type: app_store
   name: tk-multi-pythonconsole
@@ -132,4 +132,17 @@ apps.tk-mari-projectmanager.location:
   name: tk-mari-projectmanager
   type: app_store
   version: v1.3.1
+apps.tk-multi-bugreporter.location:
+  name: tk-multi-bugreporter
+  type: git_branch
+  branch: master
+  path: https://github.com/vertpipe/tk-multi-bugreporter.git
+  version: 401dd27
+apps.sb-shotgun-schema-introspection.location:
+  name: sb-shotgun-schema-introspection
+  type: git_branch
+  branch: master
+  path: https://github.com/scottb08/sb-shotgun-schema-introspection.git
+  version: f0488f0
+
 frameworks: '@frameworks'
