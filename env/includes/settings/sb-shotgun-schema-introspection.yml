@@ -1,0 +1,10 @@
+################################################################################
+
+includes:
+- ../app_locations.yml
+
+################################################################################
+
+settings.sb-shotgun-schema-introspection:
+    menu_name: Schema Introspection
+    location: '@apps.sb-shotgun-schema-introspection.location'
