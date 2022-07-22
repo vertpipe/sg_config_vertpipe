@@ -83,3 +83,8 @@ engines.tk-blender.location:
   organization: diegogarciahuerta
   repository: tk-blender
   version: v1.1.1
+engines.tk-substancepainter.location:
+  type: github_release
+  organization: diegogarciahuerta
+  repository: tk-substancepainter
+  version: v1.2.2
