@@ -169,7 +169,7 @@ class PublishFile(HookBaseClass):
                     copy_folder(sequence_file, publish_file)
                 else:
                     copy_file(sequence_file, publish_file)
-            except Exception, e:
+            except Exception as e:
                 raise Exception(
                     "Failed to copy work file from '%s' to '%s'.\n%s" %
                     (sequence_file, publish_file, traceback.format_exc())
@@ -283,14 +283,14 @@ class PublishFile(HookBaseClass):
                     fields = context.as_template_fields(publish_template, validate=False)
                     self.logger.debug("fields %s" % (fields))
 
-                except Exception, e:
+                except Exception as e:
                     try:
                         # force creation of folders so we're able to resolve template fields
                         self.logger.debug("Unable to resolve template fields! Attempting to create filesystem structure (folders).")
                         task = context.task
                         context.tank.create_filesystem_structure(task['type'], task['id'])
                         fields = context.as_template_fields(publish_template, validate=False)
-                    except Exception, e:
+                    except Exception as e:
                         # and raise a new, clearer exception for this specific use case:
                         raise Exception("Unable to resolve template fields!  This could mean there is a mismatch "
                                         "between your folder schema and templates.  Please email "
