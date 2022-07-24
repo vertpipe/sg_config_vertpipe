@@ -30,6 +30,8 @@ settings.tk-desktop.site:
 # project
 settings.tk-desktop.project:
   apps:
+    tk-multi-aliyunoss:
+      location: "@apps.tk-multi-aliyunoss.location"
     tk-multi-bugreporter:
       location: "@apps.tk-multi-bugreporter.location"
     tk-multi-pythonconsole:

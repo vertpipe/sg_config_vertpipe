@@ -142,5 +142,7 @@ apps.sb-shotgun-schema-introspection.location:
   organization: vertpipe
   repository: sb-shotgun-schema-introspection
   version: v1.0.3
-
+apps.tk-multi-aliyunoss.location:
+  type: dev
+  path: /Users/johnnyzxt/git/tk-multi-aliyunoss
 frameworks: '@frameworks'
