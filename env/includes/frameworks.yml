@@ -72,3 +72,9 @@ frameworks:
       organization: shotgunsoftware
       repository: tk-framework-remotestorageexample
       version: v1.0.0
+  tk-framework-unrealqt_v1.x.x:
+      location:
+      version: v1.2.2
+      type: github_release
+      organization: ue4plugins
+      repository: tk-framework-unrealqt
