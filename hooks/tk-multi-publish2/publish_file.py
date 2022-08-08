@@ -10,7 +10,9 @@ import pprint
 import sgtk
 from sgtk.util.filesystem import copy_folder, copy_file, ensure_folder_exists
 from sgtk.platform.qt import QtCore, QtGui
+
 HookBaseClass = sgtk.get_hook_baseclass()
+
 
 class PublishFile(HookBaseClass):
     """
@@ -23,6 +25,7 @@ class PublishFile(HookBaseClass):
         hook: "{self}/publish_file.py:{engine}/tk-multi-publish2/publish_file.py:{config}/tk-multi-publish2/publish_file.py"
 
     """
+
     @property
     def settings(self):
         """
@@ -151,11 +154,11 @@ class PublishFile(HookBaseClass):
         # ---- copy the work files to the publish location
 
         for sequence_file in sequence_files:
-            #TODO: this is a kinda ugly way to get current frame.   We might be better of adding a get_frame() method to a hook util
-            sequence_spec = self.parent.util.get_frame_sequence_path( sequence_file, frame_spec='####')
+            # TODO: this is a kinda ugly way to get current frame.   We might be better of adding a get_frame() method to a hook util
+            sequence_spec = self.parent.util.get_frame_sequence_path(sequence_file, frame_spec='####')
             if sequence_spec is not None:
                 seqm = difflib.SequenceMatcher(None, sequence_file, sequence_spec)
-                diff = filter(lambda x:x[0] == 'replace', seqm.get_opcodes())[0]
+                diff = filter(lambda x: x[0] == 'replace', seqm.get_opcodes())[0]
                 frame = int(seqm.a[diff[1]:diff[2]])
                 item.properties["current_frame"] = frame
 
@@ -169,7 +172,7 @@ class PublishFile(HookBaseClass):
                     copy_folder(sequence_file, publish_file)
                 else:
                     copy_file(sequence_file, publish_file)
-            except Exception, e:
+            except Exception as e:
                 raise Exception(
                     "Failed to copy work file from '%s' to '%s'.\n%s" %
                     (sequence_file, publish_file, traceback.format_exc())
@@ -246,7 +249,7 @@ class PublishFile(HookBaseClass):
         self.logger.debug("running hook _get_publish_path")
         path = item.properties["path"]
         name, ext = os.path.splitext(os.path.basename(path))
-        #item.properties["name"] = name
+        # item.properties["name"] = name
         if not item.properties.get("ext"):
             item.properties["ext"] = ext.strip('.').lower()
         work_template = item.properties.get("work_template")
@@ -283,14 +286,15 @@ class PublishFile(HookBaseClass):
                     fields = context.as_template_fields(publish_template, validate=False)
                     self.logger.debug("fields %s" % (fields))
 
-                except Exception, e:
+                except Exception as e:
                     try:
                         # force creation of folders so we're able to resolve template fields
-                        self.logger.debug("Unable to resolve template fields! Attempting to create filesystem structure (folders).")
+                        self.logger.debug(
+                            "Unable to resolve template fields! Attempting to create filesystem structure (folders).")
                         task = context.task
                         context.tank.create_filesystem_structure(task['type'], task['id'])
                         fields = context.as_template_fields(publish_template, validate=False)
-                    except Exception, e:
+                    except Exception as e:
                         # and raise a new, clearer exception for this specific use case:
                         raise Exception("Unable to resolve template fields!  This could mean there is a mismatch "
                                         "between your folder schema and templates.  Please email "
@@ -333,7 +337,7 @@ class PublishFile(HookBaseClass):
                         "Did you set the \'Task\' and \'Entity Link\' yet?")
 
                     raise Exception("Not enough keys to apply fields (%s) to "
-                        "publish template (%s)" % (fields, publish_template))
+                                    "publish template (%s)" % (fields, publish_template))
                 else:
                     publish_path = publish_template.apply_fields(fields)
                     self.logger.debug(
@@ -343,7 +347,6 @@ class PublishFile(HookBaseClass):
         else:
             self.logger.debug("publish_template: %s" % publish_template)
             self.logger.debug("work_template: %s" % work_template)
-
 
         if not publish_path:
             publish_path = path
@@ -432,11 +435,12 @@ class PublishFile(HookBaseClass):
                             break
                     except:
                         pass
-             # if we got to this point none of the templates in our list were viable
+            # if we got to this point none of the templates in our list were viable
             # raise an exception now
             if not template_match:
                 item.properties["publish_template"] = None
-                raise Exception("Unable to match to a viable publish template out of list: %s" % publish_template_setting.value)
+                raise Exception(
+                    "Unable to match to a viable publish template out of list: %s" % publish_template_setting.value)
         else:
             publish_template = publisher.engine.get_template_by_name(
                 publish_template_setting.value)
@@ -470,6 +474,7 @@ class PublishFile(HookBaseClass):
 
         widget.editLine.setText(tasks_settings[0]["Element Name"])
 
+
 class CustomNameWidget(QtGui.QWidget):
 
     def __init__(self, parent, qtwidgets, description_widget=None):
@@ -498,7 +503,7 @@ class CustomNameWidget(QtGui.QWidget):
         if description_widget:
             layout.addWidget(description_widget)
 
-        #elided_label = qtwidgets.import_module("elided_label")
-        #long_label = elided_label.ElidedLabel(self)
-        #long_label.setText("why do we need a long label?")
-        #layout.addWidget(long_label)
+        # elided_label = qtwidgets.import_module("elided_label")
+        # long_label = elided_label.ElidedLabel(self)
+        # long_label.setText("why do we need a long label?")
+        # layout.addWidget(long_label)
