@@ -25,7 +25,7 @@ settings.tk-multi-publish2.standalone:
   collector: "{self}/collector.py"
   publish_plugins:
   - name: Publish to ShotGrid
-    hook: "{self}/publish_file.py:{config}/tk-multi-publish2/publish_file.py"
+    hook: "{self}/publish_file.py:{config}/tk-multi-publish2/standalone_publish_file_to_location.py"
     settings:
       Publish Template:
         - ext: [ "ma" ]
@@ -35,8 +35,11 @@ settings.tk-multi-publish2.standalone:
           entity_type: "Shot"
           template: "maya_shot_publish"
         - ext: [ "nk" ]
+          entity_type: "Asset"
+          template: "nuke_asset_publish"
+        - ext: [ "nk" ]
           entity_type: "Shot"
-          template: "maya_nk_shot_publish"
+          template: "nuke_shot_publish"
   - name: Upload for review
     hook: "{self}/upload_version.py"
     settings: {}
