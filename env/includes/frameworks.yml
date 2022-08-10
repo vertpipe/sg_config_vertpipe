@@ -37,9 +37,9 @@ frameworks:
       version: v1.5.3
   tk-framework-qtwidgets_v2.x.x:
     location:
-      version: v2.10.3
       type: app_store
       name: tk-framework-qtwidgets
+      version: v2.10.4
   tk-framework-shotgunutils_v5.x.x:
     location:
       version: v5.8.5
@@ -73,8 +73,8 @@ frameworks:
       repository: tk-framework-remotestorageexample
       version: v1.0.0
   tk-framework-unrealqt_v1.x.x:
-      location:
-      version: v1.2.2
-      type: github_release
-      organization: ue4plugins
-      repository: tk-framework-unrealqt
+    location:
+    version: v1.2.2
+    type: github_release
+    organization: ue4plugins
+    repository: tk-framework-unrealqt

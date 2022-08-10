@@ -6,7 +6,7 @@
 frameworks:
     tk-framework-unrealqt_v1.x.x:
       location:
-        version: v1.2.4
+        version: v1.2.5
         type: github_release
         organization: vertpipe
         repository: tk-framework-unrealqt
