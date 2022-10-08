@@ -85,6 +85,6 @@ engines.tk-blender.location:
   version: v1.1.1
 engines.tk-substancepainter.location:
   type: github_release
-  organization: diegogarciahuerta
+  organization: vertpipe
   repository: tk-substancepainter
-  version: v1.2.2
+  version: v1.2.3
