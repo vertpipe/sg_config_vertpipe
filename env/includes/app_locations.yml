@@ -142,5 +142,4 @@ apps.sb-shotgun-schema-introspection.location:
   organization: vertpipe
   repository: sb-shotgun-schema-introspection
   version: v1.0.3
-
 frameworks: '@frameworks'
