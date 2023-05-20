@@ -35,7 +35,7 @@ apps.tk-multi-breakdown2.location:
 apps.tk-multi-demo.location:
   type: app_store
   name: tk-multi-demo
-  version: v1.3.3
+  version: v1.3.4
 apps.tk-multi-launchapp.location:
   type: app_store
   name: tk-multi-launchapp
@@ -137,4 +137,9 @@ apps.tk-multi-bugreporter.location:
   organization: vertpipe
   repository: tk-multi-bugreporter
   version: v0.0.2
+apps.sb-shotgun-schema-introspection.location:
+  type: github_release
+  organization: vertpipe
+  repository: sb-shotgun-schema-introspection
+  version: v1.0.3
 frameworks: '@frameworks'

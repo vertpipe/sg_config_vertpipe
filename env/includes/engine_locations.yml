@@ -29,7 +29,7 @@ engines.tk-aftereffects.location:
 engines.tk-alias.location:
   type: app_store
   name: tk-alias
-  version: v2.1.6
+  version: v2.1.7
 engines.tk-desktop.location:
   type: app_store
   name: tk-desktop
@@ -83,3 +83,8 @@ engines.tk-blender.location:
   organization: diegogarciahuerta
   repository: tk-blender
   version: v1.1.1
+engines.tk-substancepainter.location:
+  type: github_release
+  organization: vertpipe
+  repository: tk-substancepainter
+  version: v1.2.3

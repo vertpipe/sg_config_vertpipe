@@ -25,8 +25,21 @@ settings.tk-multi-publish2.standalone:
   collector: "{self}/collector.py"
   publish_plugins:
   - name: Publish to ShotGrid
-    hook: "{self}/publish_file.py"
-    settings: {}
+    hook: "{self}/publish_file.py:{config}/tk-multi-publish2/standalone_publish_file_to_location.py"
+    settings:
+      Publish Template:
+        - ext: [ "ma" ]
+          entity_type: "Asset"
+          template: "maya_asset_publish"
+        - ext: [ "ma" ]
+          entity_type: "Shot"
+          template: "maya_shot_publish"
+        - ext: [ "nk" ]
+          entity_type: "Asset"
+          template: "nuke_asset_publish"
+        - ext: [ "nk" ]
+          entity_type: "Shot"
+          template: "nuke_shot_publish"
   - name: Upload for review
     hook: "{self}/upload_version.py"
     settings: {}
@@ -196,7 +209,7 @@ settings.tk-multi-publish2.maya.asset_step:
 
 # shot step
 settings.tk-multi-publish2.maya.shot_step:
-  collector: "{self}/collector.py:{engine}/tk-multi-publish2/basic/collector.py"
+  collector: "{self}/collector.py:{engine}/tk-multi-publish2/basic/collector.py:{config}/tk-multi-publish2/maya/collector.py"
   collector_settings:
       Work Template: maya_shot_work
   publish_plugins:
@@ -213,6 +226,11 @@ settings.tk-multi-publish2.maya.shot_step:
     hook: "{self}/publish_file.py:{engine}/tk-multi-publish2/basic/publish_session.py"
     settings:
         Publish Template: maya_shot_publish
+  - name: Publish Camera to Shotgun
+    hook: "{self}/publish_file.py:{engine}/tk-multi-publish2/basic/publish_session.py:{config}/tk-multi-publish2/maya/publish_camera.py"
+    settings:
+        Publish Template: maya_shot_camera_publish
+        Cameras: [cam*]
   help_url: *help_url
   location: "@apps.tk-multi-publish2.location"
 
@@ -611,5 +629,40 @@ settings.tk-multi-publish2.blender.shot_step:
     hook: "{self}/publish_file.py:{engine}/tk-multi-publish2/basic/publish_session.py"
     settings:
         Publish Template: blender_shot_publish
+  help_url: *help_url
+  location: "@apps.tk-multi-publish2.location"
+
+################################################################################
+# --- Substance Painter
+
+# asset step
+settings.tk-multi-publish2.substancepainter.asset_step:
+  collector: "{self}/collector.py:{engine}/tk-multi-publish2/basic/collector.py"
+  collector_settings:
+      Work Template: substancepainter_asset_work
+      Work Export Template: substancepainter_asset_textures_path_export
+      Publish Textures as Folder: true
+  publish_plugins:
+  - name: Publish to Shotgun
+    hook: "{self}/publish_file.py"
+    settings: {}
+  - name: Publish to Shotgun
+    hook: "{self}/publish_file.py:{engine}/tk-multi-publish2/basic/publish_textures.py"
+    settings:
+      Publish Template: substancepainter_asset_textures_path_publish
+  - name: Publish to Shotgun
+    hook: "{self}/publish_file.py:{engine}/tk-multi-publish2/basic/publish_texture.py"
+    settings:
+      Publish Template: substancepainter_asset_texture_path_publish
+  - name: Upload for review
+    hook: "{self}/upload_version.py"
+    settings: {}
+  - name: Begin file versioning
+    hook: "{engine}/tk-multi-publish2/basic/start_version_control.py"
+    settings: {}
+  - name: Publish to Shotgun
+    hook: "{self}/publish_file.py:{engine}/tk-multi-publish2/basic/publish_session.py"
+    settings:
+        Publish Template: substancepainter_asset_publish
   help_url: *help_url
   location: "@apps.tk-multi-publish2.location"
