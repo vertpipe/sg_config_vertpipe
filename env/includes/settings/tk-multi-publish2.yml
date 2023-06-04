@@ -343,6 +343,21 @@ settings.tk-multi-publish2.photoshop.asset_step:
   - name: Upload for review
     hook: "{engine}/tk-multi-publish2/basic/upload_version.py"
     settings: {}
+  - name: Publish PNG to ShotGrid
+    hook: "{self}/publish_file.py:{engine}/tk-multi-publish2/basic/publish_image.py"
+    settings:
+      Publish Template: photoshop_asset_png_publish
+      Export Settings:
+        format: PNG
+        PNG8: False
+        quality: 100
+  - name: Publish JPEG to ShotGrid
+    hook: "{self}/publish_file.py:{engine}/tk-multi-publish2/basic/publish_image.py"
+    settings:
+      Publish Template: photoshop_asset_jpg_publish
+      Export Settings:
+        format: JPEG
+        quality: 100
   help_url: *help_url
   location: "@apps.tk-multi-publish2.location"
 
@@ -368,6 +383,21 @@ settings.tk-multi-publish2.photoshop.shot_step:
   - name: Upload for review
     hook: "{engine}/tk-multi-publish2/basic/upload_version.py"
     settings: {}
+  - name: Publish PNG to ShotGrid
+    hook: "{self}/publish_file.py:{engine}/tk-multi-publish2/basic/publish_image.py"
+    settings:
+      Publish Template: photoshop_shot_png_publish
+      Export Settings:
+        format: PNG
+        PNG8: False
+        quality: 100
+  - name: Publish JPEG to ShotGrid
+    hook: "{self}/publish_file.py:{engine}/tk-multi-publish2/basic/publish_image.py"
+    settings:
+      Publish Template: photoshop_shot_jpg_publish
+      Export Settings:
+        format: JPEG
+        quality: 100
   help_url: *help_url
   location: "@apps.tk-multi-publish2.location"
 
@@ -508,6 +538,7 @@ settings.tk-multi-publish2.alias.asset_step:
   collector: "{self}/collector.py:{engine}/tk-multi-publish2/basic/collector.py"
   collector_settings:
       Work Template: alias_asset_work
+      Background Processing: True
   publish_plugins:
    - name: Publish to ShotGrid
      hook: "{self}/publish_file.py"
@@ -536,6 +567,7 @@ settings.tk-multi-publish2.alias.asset_step:
    - name: Publish Annotations to ShotGrid
      hook: "{engine}/tk-multi-publish2/basic/publish_annotations.py"
      settings: {}
+  post_phase: "{self}/post_phase.py:{config}/tk-multi-publish2/post_phase.py"
   help_url: *help_url
   location: "@apps.tk-multi-publish2.location"
 
@@ -549,6 +581,7 @@ settings.tk-multi-publish2.vred.asset_step:
   collector: "{self}/collector.py:{engine}/tk-multi-publish2/basic/collector.py"
   collector_settings:
       Work Template: vred_asset_work
+      Background Processing: True
   publish_plugins:
    - name: Publish to ShotGrid
      hook: "{self}/publish_file.py"
