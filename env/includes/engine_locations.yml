@@ -53,7 +53,7 @@ engines.tk-mari.location:
 engines.tk-maya.location:
   type: app_store
   name: tk-maya
-  version: v0.11.5
+  version: v0.11.6
 engines.tk-motionbuilder.location:
   type: app_store
   name: tk-motionbuilder
@@ -80,11 +80,11 @@ engines.tk-vred.location:
   version: v2.1.5
 engines.tk-blender.location:
   type: github_release
-  organization: diegogarciahuerta
+  organization: vertpipe
   repository: tk-blender
-  version: v1.1.1
+  version: v1.1.2
 engines.tk-substancepainter.location:
   type: github_release
   organization: vertpipe
   repository: tk-substancepainter
-  version: v1.2.3
+  version: v1.2.4
