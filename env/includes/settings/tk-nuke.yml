@@ -94,6 +94,8 @@ settings.tk-nuke.asset:
 # asset_step
 settings.tk-nuke.asset_step:
   apps:
+    tk-multi-bugreporter:
+      location: "@apps.tk-multi-bugreporter.location"
     tk-multi-about:
       location: "@apps.tk-multi-about.location"
     tk-multi-breakdown:
@@ -118,6 +120,8 @@ settings.tk-nuke.asset_step:
 # project
 settings.tk-nuke.project:
   apps:
+    tk-multi-bugreporter:
+      location: "@apps.tk-multi-bugreporter.location"
     tk-multi-about:
       location: "@apps.tk-multi-about.location"
     tk-multi-pythonconsole:
@@ -162,6 +166,8 @@ settings.tk-nuke.shot:
 # shot_step
 settings.tk-nuke.shot_step:
   apps:
+    tk-multi-bugreporter:
+      location: "@apps.tk-multi-bugreporter.location"
     tk-multi-about:
       location: "@apps.tk-multi-about.location"
     tk-multi-breakdown:

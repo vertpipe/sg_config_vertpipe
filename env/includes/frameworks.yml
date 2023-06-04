@@ -19,32 +19,32 @@ frameworks:
     location:
       type: app_store
       name: tk-framework-adobe
-      version: v1.1.6
+      version: v1.1.8
   tk-framework-adminui_v0.x.x:
     location:
-      version: v0.7.2
       type: app_store
       name: tk-framework-adminui
+      version: v0.7.3
   tk-framework-aliastranslations_v0.x.x:
     location:
-      version: v0.2.2
       type: app_store
       name: tk-framework-aliastranslations
+      version: v0.2.3
   tk-framework-desktopserver_v1.x.x:
     location:
       type: app_store
       name: tk-framework-desktopserver
-      version: v1.5.3
+      version: v1.6.1
   tk-framework-qtwidgets_v2.x.x:
     location:
       type: app_store
       name: tk-framework-qtwidgets
-      version: v2.10.4
+      version: v2.10.6
   tk-framework-shotgunutils_v5.x.x:
     location:
-      version: v5.8.5
       type: app_store
       name: tk-framework-shotgunutils
+      version: v5.8.6
   tk-framework-widget_v0.2.x:
     location:
       version: v0.2.8
@@ -74,7 +74,7 @@ frameworks:
       version: v1.0.0
   tk-framework-unrealqt_v1.x.x:
     location:
-    version: v1.2.2
+    version: v1.2.6
     type: github_release
-    organization: ue4plugins
+    organization: vertpipe
     repository: tk-framework-unrealqt

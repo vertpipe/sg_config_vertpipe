@@ -41,6 +41,8 @@ settings.tk-maya.asset:
 # asset_step
 settings.tk-maya.asset_step:
   apps:
+    tk-multi-bugreporter:
+      location: "@apps.tk-multi-bugreporter.location"
     tk-multi-about:
       location: "@apps.tk-multi-about.location"
     tk-multi-breakdown:
@@ -104,6 +106,8 @@ settings.tk-maya.shot:
 # shot_step
 settings.tk-maya.shot_step:
   apps:
+    tk-multi-bugreporter:
+      location: "@apps.tk-multi-bugreporter.location"
     tk-multi-about:
       location: "@apps.tk-multi-about.location"
     tk-multi-breakdown:
