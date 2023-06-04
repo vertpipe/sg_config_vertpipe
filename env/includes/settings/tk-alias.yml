@@ -19,6 +19,7 @@ includes:
 - ./tk-multi-publish2.yml
 - ./tk-multi-shotgunpanel.yml
 - ./tk-multi-workfiles2.yml
+- ./tk-multi-data-validation.yml
 
 ################################################################################
 
@@ -47,13 +48,15 @@ settings.tk-alias.asset_step:
     tk-multi-publish2: "@settings.tk-multi-publish2.alias.asset_step"
     tk-multi-shotgunpanel: "@settings.tk-multi-shotgunpanel.alias"
     tk-multi-workfiles2: "@settings.tk-multi-workfiles2.alias.asset_step"
+    tk-multi-data-validation: "@settings.tk-multi-data-validation.alias"
+    tk-multi-bg-publish:
+      location: "@apps.tk-multi-bg-publish.location"
   reference_template: alias_asset_reference_publish
   menu_favourites:
   - {app_instance: tk-multi-workfiles2, name: File Open...}
   - {app_instance: tk-multi-workfiles2, name: File Save...}
   - {app_instance: tk-multi-publish2, name: Publish...}
   location: "@engines.tk-alias.location"
-
 # project
 settings.tk-alias.project:
   apps:
@@ -63,6 +66,13 @@ settings.tk-alias.project:
       location: "@apps.tk-multi-pythonconsole.location"
     tk-multi-shotgunpanel: "@settings.tk-multi-shotgunpanel.alias"
     tk-multi-workfiles2: "@settings.tk-multi-workfiles2.alias"
+    tk-multi-data-validation: "@settings.tk-multi-data-validation.alias"
   menu_favourites:
   - {app_instance: tk-multi-workfiles2, name: File Open...}
   location: "@engines.tk-alias.location"
+frameworks:
+  tk-framework-aliastranslations_v0.2.3:
+    location:
+      type: app_store
+      name: tk-framework-aliastranslations
+      version: v0.2.3

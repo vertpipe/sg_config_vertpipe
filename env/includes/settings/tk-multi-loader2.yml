@@ -82,6 +82,11 @@ settings.tk-multi-loader2.houdini:
     filters:
     - [project, is, '{context.project}']
     hierarchy: [sg_asset_type, code]
+  - caption: Assets - Linked
+    entity_type: Asset
+    filters:
+    - [ linked_projects, is, "{context.project}" ]
+    hierarchy: [ project.Project.name, sg_asset_type, code ]
   - caption: Shots
     entity_type: Shot
     filters:
@@ -107,6 +112,11 @@ settings.tk-multi-loader2.mari:
     - [project, is, '{context.project}']
     hierarchy: [sg_asset_type, code]
     publish_filters: []
+  - caption: Assets - Linked
+    entity_type: Asset
+    filters:
+    - [ linked_projects, is, "{context.project}" ]
+    hierarchy: [ project.Project.name, sg_asset_type, code ]
   - caption: My Tasks
     entity_type: Task
     filters:
@@ -127,6 +137,7 @@ settings.tk-multi-loader2.maya:
     Photoshop Image: [texture_node, image_plane]
     Rendered Image: [texture_node, image_plane]
     Texture: [texture_node, image_plane]
+    Maya FBX: [import]
     FBX Camera: [reference, import]
   entities:
   - caption: Assets
@@ -134,6 +145,11 @@ settings.tk-multi-loader2.maya:
     filters:
     - [project, is, "{context.project}"]
     hierarchy: [sg_asset_type, code]
+  - caption: Assets - Linked
+    entity_type: Asset
+    filters:
+    - [ linked_projects, is, "{context.project}" ]
+    hierarchy: [ project.Project.name, sg_asset_type, code ]
   - caption: Shots
     entity_type: Shot
     filters:
@@ -166,6 +182,11 @@ settings.tk-multi-loader2.nuke:
     filters:
     - [project, is, '{context.project}']
     hierarchy: [sg_asset_type, code]
+  - caption: Assets - Linked
+    entity_type: Asset
+    filters:
+    - [ linked_projects, is, "{context.project}" ]
+    hierarchy: [ project.Project.name, sg_asset_type, code ]
   - caption: Shots
     entity_type: Shot
     filters:
@@ -193,6 +214,11 @@ settings.tk-multi-loader2.nukestudio.project:
     filters:
     - [project, is, '{context.project}']
     hierarchy: [sg_asset_type, code]
+  - caption: Assets - Linked
+    entity_type: Asset
+    filters:
+    - [ linked_projects, is, "{context.project}" ]
+    hierarchy: [ project.Project.name, sg_asset_type, code ]
   - caption: Shots
     entity_type: Shot
     filters:
@@ -224,6 +250,11 @@ settings.tk-multi-loader2.nukestudio:
     filters:
     - [project, is, '{context.project}']
     hierarchy: [sg_asset_type, code]
+  - caption: Assets - Linked
+    entity_type: Asset
+    filters:
+    - [ linked_projects, is, "{context.project}" ]
+    hierarchy: [ project.Project.name, sg_asset_type, code ]
   - caption: Shots
     entity_type: Shot
     filters:
@@ -327,7 +358,9 @@ settings.tk-multi-loader2.alias:
     Stl File: [import, import_as_reference]
     Jt File: [import, import_as_reference]
     Catpart File: [import, import_as_reference]
+    Catproduct File: [import, import_as_reference]
     Fbx File: [import]
+    Motion Builder FBX: [import]
     Image: [texture_node]
     Photoshop Image: [texture_node]
     Tif File: [texture_node]
@@ -368,6 +401,7 @@ settings.tk-multi-loader2.vred:
     Jt File: [import, import_with_options, smart_reference]
     Catpart File: [import, import_with_options, smart_reference]
     Fbx File: [import, import_with_options, smart_reference]
+    Motion Builder FBX: [import, import_with_options, smart_reference]
     VRED Scene: [import, import_with_options, smart_reference]
     Osb File: [import, import_with_options, smart_reference]
     Image: [import_sceneplate]
