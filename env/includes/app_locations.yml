@@ -45,9 +45,10 @@ apps.tk-multi-loader2.location:
   name: tk-multi-loader2
   version: v1.23.0
 apps.tk-multi-publish2.location:
-  type: app_store
-  name: tk-multi-publish2
-  version: v2.6.5
+  type: github_release
+  organization: vertpipe
+  repository: tk-multi-publish2
+  version: v2.6.6
 apps.tk-multi-pythonconsole.location:
   type: app_store
   name: tk-multi-pythonconsole
@@ -75,7 +76,7 @@ apps.tk-multi-snapshot.location:
 apps.tk-multi-workfiles2.location:
   type: app_store
   name: tk-multi-workfiles2
-  version: v1.13.5
+  version: v0.13.5
 apps.tk-multi-devutils.location:
   type: app_store
   name: tk-multi-devutils
