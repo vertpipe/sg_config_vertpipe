@@ -20,11 +20,13 @@ includes:
 - ./tk-multi-loader2.yml
 - ./tk-multi-publish2.yml
 - ./tk-multi-reviewsubmission.yml
+- ./tk-multi-deadlinereviewsubmission.yml
 - ./tk-multi-screeningroom.yml
 - ./tk-multi-shotgunpanel.yml
 - ./tk-multi-snapshot.yml
 - ./tk-multi-workfiles2.yml
 - ./tk-nuke-writenode.yml
+- ./tk-nuke-template.yml
 
 ################################################################################
 # Hiero
@@ -135,6 +137,10 @@ settings.tk-nuke.project:
     tk-multi-workfiles2: "@settings.tk-multi-workfiles2"
     tk-nuke-quickreview:
       location: "@apps.tk-nuke-quickreview.location"
+    tk-nuke-template:
+      location: "@apps.tk-nuke-template.location"
+    tk-nuke-versiondropper:
+      location: "@apps.tk-nuke-versiondropper.location"
   menu_favourites:
   - {app_instance: tk-multi-workfiles2, name: File Open...}
   location: "@engines.tk-nuke.location"
@@ -182,6 +188,7 @@ settings.tk-nuke.shot_step:
     tk-multi-breakdown2: "@settings.tk-multi-breakdown2.nuke"
     tk-multi-loader2: "@settings.tk-multi-loader2.nuke"
     tk-multi-publish2: "@settings.tk-multi-publish2.nuke.shot_step"
+    tk-multi-deadlinereviewsubmission: "@settings.tk-multi-deadlinereviewsubmission.comp.shot"
     tk-multi-reviewsubmission: "@settings.tk-multi-reviewsubmission.nuke.shot"
     tk-multi-screeningroom: "@settings.tk-multi-screeningroom.rv"
     tk-multi-shotgunpanel: "@settings.tk-multi-shotgunpanel.nuke"

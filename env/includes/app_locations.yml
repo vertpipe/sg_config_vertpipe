@@ -17,7 +17,26 @@ includes:
 ################################################################################
 # location descriptors for apps used in this configuration
 
+apps.tk-desktop-libraryimporter.location:
+  type: github_release
+  organization: nfa-vfxim
+  repository: tk-desktop-libraryimporter
+  version: 0.3.0
+
+apps.tk-desktop-deliveries.location:
+  type: github_release
+  organization: nfa-vfxim
+  repository: tk-desktop-deliveries
+  version: 0.1.1
+
 # ---- Multi apps
+
+# startup
+apps.tk-multi-startup.location:
+  type: github_release
+  organization: nfa-vfxim
+  repository: tk-multi-startup
+  version: 0.2.3
 
 # about
 apps.tk-multi-about.location:
@@ -25,9 +44,10 @@ apps.tk-multi-about.location:
   name: tk-multi-about
   version: v0.4.2
 apps.tk-multi-breakdown.location:
-  type: app_store
-  name: tk-multi-breakdown
-  version: v1.8.2
+  type: github_release
+  organization: vertpipe
+  repository: tk-multi-breakdown
+  version: v1.8.2.1
 apps.tk-multi-breakdown2.location:
   type: app_store
   name: tk-multi-breakdown2
@@ -45,22 +65,29 @@ apps.tk-multi-launchapp.location:
   name: tk-multi-launchapp
   version: v0.12.2
 apps.tk-multi-loader2.location:
-  type: app_store
-  name: tk-multi-loader2
-  version: v1.23.0
+  type: github_release
+  organization: vertpipe
+  repository: tk-multi-loader2
+  version: v1.23.0.1
 apps.tk-multi-publish2.location:
   type: github_release
   organization: vertpipe
   repository: tk-multi-publish2
-  version: v2.6.6
+  version: v2.6.6.1
 apps.tk-multi-pythonconsole.location:
   type: app_store
   name: tk-multi-pythonconsole
   version: v1.3.1
 apps.tk-multi-reviewsubmission.location:
-  type: app_store
-  name: tk-multi-reviewsubmission
-  version: v1.2.1
+  type: github_release
+  organization: nfa-vfxim
+  repository: tk-multi-reviewsubmission
+  version: 1.1.1.3
+apps.tk-multi-deadlinereviewsubmission.location:
+  type: github_release
+  organization: nfa-vfxim
+  repository: tk-multi-deadlinereviewsubmission
+  version: 0.2.1
 apps.tk-multi-screeningroom.location:
   type: app_store
   name: tk-multi-screeningroom
@@ -78,9 +105,10 @@ apps.tk-multi-snapshot.location:
   name: tk-multi-snapshot
   version: v0.9.1
 apps.tk-multi-workfiles2.location:
-  type: app_store
-  name: tk-multi-workfiles2
-  version: v0.13.5
+  type: github_release
+  organization: vertpipe
+  repository: tk-multi-workfiles2
+  version: v0.13.5.1
 apps.tk-multi-devutils.location:
   type: app_store
   name: tk-multi-devutils
@@ -121,14 +149,56 @@ apps.tk-houdini-mantranode.location:
   type: app_store
   name: tk-houdini-mantranode
   version: v0.5.2
+apps.tk-houdini-cachenode.location:
+  type: github_release
+  organization: nfa-vfxim
+  repository: tk-houdini-cachenode
+  version: 0.3.3
+apps.tk-houdini-flipbook.location:
+  type: github_release
+  organization: nfa-vfxim
+  repository: tk-houdini-flipbook
+  version: 1.2.1
+apps.tk-houdini-arnold.location:
+  type: github_release
+  organization: nfa-vfxim
+  repository: tk-houdini-arnold
+  version: 0.3.6
+apps.tk-houdini-renderman.location:
+  type: github_release
+  organization: nfa-vfxim
+  repository: tk-houdini-renderman
+  version: 0.2.2
+apps.tk-houdini-usdrop.location:
+  type: github_release
+  organization: nfa-vfxim
+  repository: tk-houdini-usdrop
+  version: 0.1.0
+apps.tk-houdini-template.location:
+  type: github_release
+  organization: nfa-vfxim
+  repository: tk-houdini-template
+  version: 0.1.0
 apps.tk-nuke-quickreview.location:
-  type: app_store
-  name: tk-nuke-quickreview
-  version: v1.2.1
+  type: github_release
+  organization: nfa-vfxim
+  repository: tk-nuke-quickreview
+  version: 1.1.0.1
 apps.tk-nuke-writenode.location:
-  name: tk-nuke-writenode
-  type: app_store
-  version: v1.6.2
+  type: github_release
+  organization: nfa-vfxim
+  repository: tk-nuke-writenode
+  version: 2.1.1
+apps.tk-nuke-template.location:
+  type: github_release
+  organization: nfa-vfxim
+  repository: tk-nuke-template
+  version: 0.2.0
+apps.tk-nuke-versiondropper.location:
+  type: github_release
+  organization: nfa-vfxim
+  repository: tk-nuke-versiondropper
+  version: 0.1.3
 apps.tk-flame-export.location:
   name: tk-flame-export
   type: app_store

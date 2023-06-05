@@ -70,12 +70,14 @@ settings.tk-multi-loader2.flame:
 # houdini
 settings.tk-multi-loader2.houdini:
   action_mappings:
+    BGEO Cache: [file_sop]
     Alembic Cache: [import]
     Houdini Scene: [merge]
     Image: [file_cop]
     Photoshop Image: [file_cop]
     Rendered Image: [file_cop]
     Texture: [file_cop]
+    USD: [usd_reference, usd_sublayer]
   entities:
   - caption: Assets
     entity_type: Asset
@@ -139,6 +141,7 @@ settings.tk-multi-loader2.maya:
     Texture: [texture_node, image_plane]
     Maya FBX: [import]
     FBX Camera: [reference, import]
+    Object File: [import, reference]
   entities:
   - caption: Assets
     entity_type: Asset
@@ -167,7 +170,7 @@ settings.tk-multi-loader2.maya:
 # nuke
 settings.tk-multi-loader2.nuke:
   action_mappings:
-    Alembic Cache: [read_node]
+    Alembic Cache: [geo_node]
     Flame Render: [read_node]
     Flame Quicktime: [read_node]
     Image: [read_node]
@@ -176,6 +179,7 @@ settings.tk-multi-loader2.nuke:
     Photoshop Image: [read_node]
     Rendered Image: [read_node]
     Texture: [read_node]
+    USD: [geo_node, camera_node]
   entities:
   - caption: Assets
     entity_type: Asset

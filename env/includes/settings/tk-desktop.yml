@@ -18,6 +18,8 @@ includes:
 - ./tk-multi-publish2.yml
 - ./tk-multi-screeningroom.yml
 - ./sb-shotgun-schema-introspection.yml
+- ./tk-desktop-libraryimporter.yml
+- ./tk-desktop-deliveries.yml
 
 ################################################################################
 
@@ -36,6 +38,8 @@ settings.tk-desktop.project:
       location: "@apps.tk-multi-pythonconsole.location"
     tk-multi-devutils:
       location: "@apps.tk-multi-devutils.location"
+    tk-desktop-deliveries: "@settings.tk-desktop-deliveries"
+    tk-desktop-libraryimporter: "@settings.tk-desktop-libraryimporter"
     tk-multi-demo:
       location: "@apps.tk-multi-demo.location"
     tk-multi-launchapp: "@settings.tk-multi-launchapp"
@@ -48,18 +52,31 @@ settings.tk-desktop.project:
 
   groups:
   - matches:
+    - "*Deliveries*"
+    - "*Pub*"
+    name: Filmacademy
+  - matches:
+    - "*SG*"
+    - "*Schema*"
+    - "*Report*"
+    name: Development
+  - matches:
     - "*Fla*"
+    - "*Nu*"
+    - "*Photoshop*"
+    - "*After*"
+    - "*Effects*"
+    - "*Subs*"
+    name: 2D
+  - matches:
     - "*Houdini*"
     - "*Mari*"
     - "*Max*"
     - "*Maya*"
     - "*Motion*"
-    - "*Nuke*"
-    - "*Photoshop*"
-    - "*After*"
-    - "*Effects*"
-    - "Unreal"
-    name: Creative Tools
+    - "*Unreal*"
+    - "*Blender*"
+    name: 3D
   - matches:
     - "*Hiero*"
     name: Editorial Tools
