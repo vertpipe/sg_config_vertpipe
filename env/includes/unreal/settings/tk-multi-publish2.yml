@@ -50,15 +50,23 @@ settings.tk-multi-publish2.maya.asset_step.unreal:
     hook: "{self}/publish_file.py:{engine}/tk-multi-publish2/basic/publish_session.py"
     settings:
         Publish Template: maya_asset_publish
-  - name: Publish to ShotGrid
-    hook: "{self}/publish_file.py:{engine}/tk-multi-publish2/basic/publish_session_geometry.py"
-    settings:
-        Publish Template: asset_alembic_cache
+#  - name: Publish to ShotGrid
+#    hook: "{self}/publish_file.py:{engine}/tk-multi-publish2/basic/publish_session_geometry.py"
+#    settings:
+#        Publish Template: asset_alembic_cache
   - name: Publish FBX to ShotGrid
     hook: "{self}/publish_file.py:{tk-framework-unrealqt_v1.x.x}/tk-multi-publish2/tk-maya/basic/publish_fbx.py"
     settings:
         Publish Template: unreal.maya_asset_fbx_publish
-  - name: Publish and Submit for Review
+  - name: Publish USD to ShotGrid
+    hook: "{self}/publish_file.py:{engine}/tk-multi-publish2/basic/publish_session_usd.py"
+    settings:
+      Publish Template: usd_asset_publish
+  - name: Publish ABC to ShotGrid
+    hook: "{self}/publish_file.py:{engine}/tk-multi-publish2/basic/publish_session_alembic.py"
+    settings:
+      Publish Template: maya_asset_abc
+  - name: Publish UE turntable and Submit for Review
     hook: "{self}/publish_file.py:{tk-framework-unrealqt_v1.x.x}/tk-multi-publish2/tk-maya/basic/publish_turntable.py"
     settings:
         Work Template: unreal.maya_turntable_render
