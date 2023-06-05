@@ -205,11 +205,11 @@ settings.tk-multi-publish2.maya.asset_step:
     hook: "{self}/publish_file.py:{engine}/tk-multi-publish2/basic/publish_session.py"
     settings:
       Publish Template: maya_asset_publish
-  - name: Publish to ShotGrid
+  - name: Publish USD to ShotGrid
     hook: "{self}/publish_file.py:{engine}/tk-multi-publish2/basic/publish_session_usd.py"
     settings:
       Publish Template: usd_asset_publish
-  - name: Publish to ShotGrid
+  - name: Publish ABC to ShotGrid
     hook: "{self}/publish_file.py:{engine}/tk-multi-publish2/basic/publish_session_alembic.py"
     settings:
       Publish Template: maya_asset_abc
