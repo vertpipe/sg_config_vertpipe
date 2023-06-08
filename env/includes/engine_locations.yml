@@ -42,24 +42,26 @@ engines.tk-flame.location:
   type: app_store
   name: tk-flame
   version: v1.17.8
-#engines.tk-houdini.location:
-#  type: app_store
-#  name: tk-houdini
-#  version: v1.8.5
 engines.tk-houdini.location:
-  type: dev
-  path: D:\git\tk-houdini
+  type: github_release
+  organization: vertpipe
+  repository: tk-houdini
+  version: v1.8.5.2
+#engines.tk-houdini.location:
+#  type: dev
+#  path: D:\git\tk-houdini
 engines.tk-mari.location:
   type: app_store
   name: tk-mari
   version: v1.3.4
-#engines.tk-maya.location:
-#  type: app_store
-#  name: tk-maya
-#  version: v0.11.6
 engines.tk-maya.location:
-    type: dev
-    path: D:\git\tk-maya
+  type: github_release
+  organization: vertpipe
+  repository: tk-maya
+  version: v0.11.6.1
+#engines.tk-maya.location:
+#    type: dev
+#    path: D:\git\tk-maya
 engines.tk-motionbuilder.location:
   type: app_store
   name: tk-motionbuilder
