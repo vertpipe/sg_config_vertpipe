@@ -29,7 +29,7 @@ engines.tk-aftereffects.location:
 engines.tk-alias.location:
   type: app_store
   name: tk-alias
-  version: v2.2.1
+  version: v3.0.1
 engines.tk-desktop.location:
   type: app_store
   name: tk-desktop
@@ -76,7 +76,7 @@ engines.tk-nuke.location:
 engines.tk-photoshopcc.location:
   type: app_store
   name: tk-photoshopcc
-  version: v1.9.4
+  version: v1.9.5
 engines.tk-shell.location:
   type: app_store
   name: tk-shell
@@ -88,7 +88,7 @@ engines.tk-shotgun.location:
 engines.tk-vred.location:
   type: app_store
   name: tk-vred
-  version: v2.1.5
+  version: v3.0.0
 engines.tk-blender.location:
   type: github_release
   organization: vertpipe

@@ -34,12 +34,12 @@ frameworks:
     location:
       type: app_store
       name: tk-framework-desktopserver
-      version: v1.6.1
+      version: v1.6.3
   tk-framework-qtwidgets_v2.x.x:
     location:
       type: app_store
       name: tk-framework-qtwidgets
-      version: v2.10.6
+      version: v2.10.7
   tk-framework-shotgunutils_v5.x.x:
     location:
       type: app_store
